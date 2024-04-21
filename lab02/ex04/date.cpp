@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+using namespace std;
 
 class Date
 {
@@ -46,21 +47,21 @@ public:
 
     void printDate1() const
     {
-        std::cout << month << "/" << day << "/" << (year % 100) << std::endl;
+        cout << month << "/" << day << "/" << (year % 100) << endl;
     }
 
     void printDate2() const
     {
-        static const std::string months[] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                                             "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
-        std::cout << months[month - 1] << " " << day << ", " << year << std::endl;
+        static const string months[] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+        cout << months[month - 1] << " " << day << ", " << year << endl;
     }
 
     void printDate3() const
     {
-        static const std::string months[] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                                             "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
-        std::cout << day << " " << months[month - 1] << " " << year << std::endl;
+        static const string months[] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+        cout << day << " " << months[month - 1] << " " << year << endl;
     }
 };
 
